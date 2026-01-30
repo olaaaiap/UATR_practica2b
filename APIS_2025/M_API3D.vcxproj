@@ -127,11 +127,12 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Users\quint\Desktop\glfw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\externalLibs\glfw\lib;..\externalLibs\SDL\lib;..\externalLibs\vulkan\lib;..\externalLibs\pugixml\lib:..\externalLibs\reactphysics3d\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\externalLibs\glfw\lib;..\externalLibs\SDL\lib;..\externalLibs\vulkan\lib;..\externalLibs\pugixml\lib:..\externalLibs\reactphysics3d\lib;C:\Users\quint\Desktop\glfw</AdditionalLibraryDirectories>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);OpenGL32.lib;glfw3.lib;vulkan-1.lib;pugixmld.lib;glslangd.lib;shadercd.lib;shaderc_utild.lib;shaderc_combinedd.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
