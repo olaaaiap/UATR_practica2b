@@ -1,10 +1,10 @@
 #pragma once
 #include "mapi/common.h"
 
-enum class programTypes_e {
-	vertex = 0,
+typedef enum class programTypes_e {
+	vertex = 0, 
 	fragment = 1
-};
+}programTypes_e;
 
 
 class IProgram
