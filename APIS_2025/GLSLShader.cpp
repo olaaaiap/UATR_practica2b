@@ -67,10 +67,10 @@ void GLSLShader::compile()
 		glGetShaderInfoLog(idProgram, 1024, &log_length, message);
 		std::cout << "ERROR " << fileName << "\n" << message << "\n\n";
 	}
-	/*else
+	else
 	{
 		compiled = true;
-	}*/ 
+	}
 	
 
 }

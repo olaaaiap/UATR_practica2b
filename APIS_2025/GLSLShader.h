@@ -7,6 +7,7 @@ class GLSLShader : public IProgram
 {
 	std::string code; //Codigo fuente del shader
 public:
+	bool compiled = false;
 	GLSLShader(std::string fileName, programTypes_e type);
 	void readFile() override;
 	void compile() override;
