@@ -159,9 +159,13 @@
     <ClCompile Include="FactoryEngine.cpp" />
     <ClCompile Include="GL1Render.cpp" />
     <ClCompile Include="GLFWInputManager.cpp" />
+    <ClCompile Include="GLSLProgram.cpp" />
+    <ClCompile Include="GLSLShader.cpp" />
     <ClCompile Include="IEntity.cpp" />
     <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="IProgram.cpp" />
     <ClCompile Include="IRender.cpp" />
+    <ClCompile Include="IRenderProgram.cpp" />
     <ClCompile Include="Mesh3D.cpp" />
     <ClCompile Include="IObject.cpp" />
     <ClCompile Include="Object3D.cpp" />
@@ -173,9 +177,13 @@
     <ClInclude Include="FactoryEngine.h" />
     <ClInclude Include="GL1Render.h" />
     <ClInclude Include="GLFWInputManager.h" />
+    <ClInclude Include="GLSLProgram.h" />
+    <ClInclude Include="GLSLShader.h" />
     <ClInclude Include="IEntity.h" />
     <ClInclude Include="InputManager.h" />
+    <ClInclude Include="IProgram.h" />
     <ClInclude Include="IRender.h" />
+    <ClInclude Include="IRenderProgram.h" />
     <ClInclude Include="mapi\common.h" />
     <ClInclude Include="Mesh3D.h" />
     <ClInclude Include="IObject.h" />
