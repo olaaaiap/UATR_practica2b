@@ -4,10 +4,11 @@
 
 class IRenderProgram
 {
-	std::vector<IProgram*> shaders; // Vector con los programas cargados para el dibujado(shaders de vértices y fragmentos en nuestro caso)
-	std::map<std::string, unsigned int> varList; //Mapa con la lista de variables activas encontrada en los programas cargados anteriormente
 
 public:
+	std::vector<IProgram*> shaders; // Vector con los programas cargados para el dibujado(shaders de vértices y fragmentos en nuestro caso)
+	std::map<std::string, unsigned int> varList; //Mapa con la lista de variables activas encontrada en los programas cargados anteriormente
+	
 	virtual void addProgram(std::string fileName)=0; // Añade un programa identificado por su nombre de archivo para compilarlo
 	virtual void linkProgram()=0; // Una vez añadidos todos los programas,compila y linka para generar el programa final
 	virtual void use()=0; // Activa el uso de este programa
