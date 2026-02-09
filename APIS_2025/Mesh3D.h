@@ -1,30 +1,38 @@
 #pragma once
-//#include "mapi/common.h"
-#include "vertex_t.h"
+#include <glm/glm.hpp>
 #include <vector>
+#include "vertex_t.h"
 
+// Forward declaration para evitar ciclos
+class Material;
+/*
+typedef struct
+{
+    glm::vec4 pos;
+} vertex_t;
+*/
 class Mesh3D
 {
+protected:
+    std::vector<vertex_t> vVertList;
+    std::vector<glm::uint32> vTriangleIdxList;
+    Material* mat = nullptr;
 
 public:
-	static inline int meshCounter = 0;
+    static inline int meshCounter = 0;
+    int meshId;
 
-	int meshId;
+	Material* getMaterial() { return mat; }
 
+    glm::vec4 colorRGBA; // Color básico de la malla
 
-	glm::vec4 colorRGBA; //Color básico de esta malla
+    Mesh3D(); // Constructor por defecto
 
+    int getMeshID(); // Devuelve el ID único de esta malla
 
-	std::vector<vertex_t> vVertList; //Lista de vértices que forman la malla. Se agrupan de 3 en 3, representando los triángulos
-	//std::vector<int> vertexIndexList;
+    void addVertex(vertex_t vertex);
 
-	Mesh3D(); //Constructor por defecto
+    std::vector<vertex_t>* getVertList(); // Método para acceder a la lista de vértices
 
-	int getMeshID(); //Devuelve el ID único de esta malla
-
-	void addVertex(vertex_t	vertex);
-
-	std::vector<vertex_t>* getVertList(); //Método para acceder a la lista de vértices almacenada.
-
+    std::vector<glm::uint32>* getTriangleList() { return &vTriangleIdxList; }
 };
-

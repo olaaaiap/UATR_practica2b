@@ -127,11 +127,12 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Users\quint\Desktop\glfw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\externalLibs\glfw\lib;..\externalLibs\SDL\lib;..\externalLibs\vulkan\lib;..\externalLibs\pugixml\lib:..\externalLibs\reactphysics3d\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\externalLibs\glfw\lib;..\externalLibs\SDL\lib;..\externalLibs\vulkan\lib;..\externalLibs\pugixml\lib:..\externalLibs\reactphysics3d\lib;C:\Users\quint\Desktop\glfw</AdditionalLibraryDirectories>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);OpenGL32.lib;glfw3.lib;vulkan-1.lib;pugixmld.lib;glslangd.lib;shadercd.lib;shaderc_utild.lib;shaderc_combinedd.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -158,7 +159,9 @@
     <ClCompile Include="APIS3D_2025.cpp" />
     <ClCompile Include="FactoryEngine.cpp" />
     <ClCompile Include="GL1Render.cpp" />
+    <ClCompile Include="GL4Render.cpp" />
     <ClCompile Include="GLFWInputManager.cpp" />
+    <ClCompile Include="GLSLMaterial.cpp" />
     <ClCompile Include="GLSLProgram.cpp" />
     <ClCompile Include="GLSLShader.cpp" />
     <ClCompile Include="IEntity.cpp" />
@@ -176,7 +179,9 @@
   <ItemGroup>
     <ClInclude Include="FactoryEngine.h" />
     <ClInclude Include="GL1Render.h" />
+    <ClInclude Include="GL4Render.h" />
     <ClInclude Include="GLFWInputManager.h" />
+    <ClInclude Include="GLSLMaterial.h" />
     <ClInclude Include="GLSLProgram.h" />
     <ClInclude Include="GLSLShader.h" />
     <ClInclude Include="IEntity.h" />
@@ -185,6 +190,7 @@
     <ClInclude Include="IRender.h" />
     <ClInclude Include="IRenderProgram.h" />
     <ClInclude Include="mapi\common.h" />
+    <ClInclude Include="Material.h" />
     <ClInclude Include="Mesh3D.h" />
     <ClInclude Include="IObject.h" />
     <ClInclude Include="Object3D.h" />

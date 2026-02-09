@@ -1,17 +1,19 @@
-C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\APIS3D_2025.cpp;C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\APIS3D_2025.obj
-C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\FactoryEngine.cpp;C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\FactoryEngine.obj
-C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\GL1Render.cpp;C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\GL1Render.obj
-C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\GLFWInputManager.cpp;C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\GLFWInputManager.obj
-C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\GLSLProgram.cpp;C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\GLSLProgram.obj
-C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\GLSLShader.cpp;C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\GLSLShader.obj
-C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\IEntity.cpp;C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\IEntity.obj
-C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\InputManager.cpp;C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\InputManager.obj
-C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\IProgram.cpp;C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\IProgram.obj
-C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\IRender.cpp;C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\IRender.obj
-C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\IRenderProgram.cpp;C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\IRenderProgram.obj
-C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\Mesh3D.cpp;C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\Mesh3D.obj
-C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\IObject.cpp;C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\IObject.obj
-C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\Object3D.cpp;C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\Object3D.obj
-C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\System.cpp;C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\System.obj
-C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\TrianguloRot.cpp;C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\TrianguloRot.obj
-C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\World.cpp;C:\Users\01opi\Desktop\UTAD\UTILIZACION DE APIS TRIDIMENSIONALES\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\World.obj
+C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\APIS3D_2025.cpp;C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\APIS3D_2025.obj
+C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\FactoryEngine.cpp;C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\FactoryEngine.obj
+C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\GL1Render.cpp;C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\GL1Render.obj
+C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\GL4Render.cpp;C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\GL4Render.obj
+C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\GLFWInputManager.cpp;C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\GLFWInputManager.obj
+C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\GLSLMaterial.cpp;C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\GLSLMaterial.obj
+C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\GLSLProgram.cpp;C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\GLSLProgram.obj
+C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\GLSLShader.cpp;C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\GLSLShader.obj
+C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\IEntity.cpp;C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\IEntity.obj
+C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\InputManager.cpp;C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\InputManager.obj
+C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\IProgram.cpp;C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\IProgram.obj
+C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\IRender.cpp;C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\IRender.obj
+C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\IRenderProgram.cpp;C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\IRenderProgram.obj
+C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\Mesh3D.cpp;C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\Mesh3D.obj
+C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\IObject.cpp;C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\IObject.obj
+C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\Object3D.cpp;C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\Object3D.obj
+C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\System.cpp;C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\System.obj
+C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\TrianguloRot.cpp;C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\TrianguloRot.obj
+C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\World.cpp;C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\M_API3D\x64\Debug\World.obj
