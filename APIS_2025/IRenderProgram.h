@@ -14,6 +14,7 @@ public:
 	virtual void use()=0; // Activa el uso de este programa
 	virtual void checkLinkerErrors()=0; // Muestra por terminal los errores encontrados durante la compilación y linkado
 
+	virtual unsigned int getVarLocation(const std::string& name) = 0;
 
 	virtual void setVertexAttrib(std::string name, GLsizei stride, void* offset, GLint count, GLenum type) = 0;
 	virtual void setInt(std::string name, int val) = 0;

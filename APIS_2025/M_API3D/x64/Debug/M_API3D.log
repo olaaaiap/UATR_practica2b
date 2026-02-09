@@ -1,24 +1,6 @@
-﻿  APIS3D_2025.cpp
-  FactoryEngine.cpp
-  GL1Render.cpp
-C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\GL1Render.cpp(60,18): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\GL1Render.cpp(64,41): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\GL1Render.cpp(126,57): warning C4267: 'argumento': conversión de 'size_t' a 'GLsizei'; posible pérdida de datos
-  GLFWInputManager.cpp
-  GLSLProgram.cpp
-  GLSLShader.cpp
-C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\GLSLShader.cpp(60,7): warning C4101: 'errorLog': variable local sin referencia
-C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\GLSLShader.cpp(59,8): warning C4101: 'retCode': variable local sin referencia
-  IEntity.cpp
-  InputManager.cpp
-  IProgram.cpp
-  IRender.cpp
-  IRenderProgram.cpp
-  Mesh3D.cpp
-  IObject.cpp
-  Object3D.cpp
-  System.cpp
-  TrianguloRot.cpp
-  World.cpp
-  Generando código...
-LINK : fatal error LNK1104: no se puede abrir el archivo 'glfw3.lib'
+﻿  GL4Render.cpp
+C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\GL4Render.cpp(24,21): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\GL4Render.cpp(28,44): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\GL4Render.cpp(68,57): warning C4267: 'argumento': conversión de 'size_t' a 'GLsizei'; posible pérdida de datos
+C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\GL4Render.cpp(103,38): warning C4267: 'argumento': conversión de 'size_t' a 'GLsizei'; posible pérdida de datos
+  M_API3D.vcxproj -> C:\Users\quint\Desktop\UATR_practica2b\APIS_2025\x64\Debug\M_API3D.exe

@@ -1,61 +1,64 @@
 #include "TrianguloRot.h"
-
 #include "GLFWInputManager.h"
+#include "Mesh3D.h"
 
 
 TrianguloRot::TrianguloRot()
 {
-    //Crear objeto mesh3D
-	Mesh3D* mesh = new Mesh3D();
+    // Crear la Mesh3D asociada a este objeto
+    Mesh3D* mesh = new Mesh3D();
+    this->SetMesh(mesh);   // VERY IMPORTANT: asignar la malla al Object3D
 
+    // Asignar ID único del objeto (manteniendo tu sistema actual)
     this->objectId = objectCounter++;
 
-    //this->vertexList =
-    //{
-    //  {{ 0.5f, 0.5f,0.0f,1.0f}},//superior derecha
-    //  {{-0.5f, 0.5f,0.0f,1.0f}},//superior izquierda
-    //  {{-0.5f,-0.5f,0.0f,1.0f}},//inferior izquierda 
-    //  {{ 0.5f,-0.5f,0.0f,1.0f}} //inferior derecha
-    //}; //posiciones de vertices
-
+    // Lista de vértices del triángulo
+    // Formato: pos (vec4)
     this->vertexList = {
-      {{ 0.0f,  0.5f, 0.0f, 1.0f }}, // superior
-      {{-0.5f, -0.5f, 0.0f, 1.0f }}, // abajo izquierda
-      {{ 0.5f, -0.5f, 0.0f, 1.0f }}  // abajo derecha
+        {{ 0.0f,  0.5f, 0.0f, 1.0f }}, // superior
+        {{-0.5f, -0.5f, 0.0f, 1.0f }}, // abajo izquierda
+        {{ 0.5f, -0.5f, 0.0f, 1.0f }}  // abajo derecha
     };
+
+    // Triángulo 3 índices
     this->vertexIndexList = { 0, 1, 2 };
 
-
-    //this->vertexIndexList = { 2,1,0, 2,0,3 };
-
-    for (auto v : this->vertexList) {
+    // Rellenar la Mesh3D usando los vértices definidos arriba
+    // (mantiene compatibilidad con tu pipeline actual)
+    for (auto v : this->vertexList) 
+    {
         mesh->addVertex(v);
-	}
+    }
 
-    this->setPosicion({ 0.0f,0.0f,0.0f,1.0f });
-    this->setRotacion({ 0.0f,0.0f,0.0f,1.0f });
-    this->setEscala({ 1.0f,1.0f,1.0f,1.0f });
-
+    // Transformaciones iniciales
+    this->setPosicion({ 0.0f, 0.0f, 0.0f, 1.0f });
+    this->setRotacion({ 0.0f, 0.0f, 0.0f, 1.0f });
+    this->setEscala({ 1.0f, 1.0f, 1.0f, 1.0f });
 }
+
+// step(deltaTime)
+// Rota el triángulo sobre el eje Y
+// Teclas R y T controlan la rotación
+// Tecla E sale del programa
 
 void TrianguloRot::step(double deltaTime)
 {
-    //Actualizar el atributo de rotaciones, haciendolo girar sobre el eje Y a una velocidad de 90 grados por segundo.
-    float velRot = 90.0f;
+    float velRot = 90.0f; // grados por segundo
 
-    // Modify rotation around Y axis
+    // Obtener rotación actual
     glm::vec4 rot = this->GetRotacion();
+
+    // Rotación con teclado
     if (GLFWInputManager::keyboardState[GLFW_KEY_R])
         rot.y += static_cast<float>(velRot * deltaTime);
+
     if (GLFWInputManager::keyboardState[GLFW_KEY_T])
         rot.y -= static_cast<float>(velRot * deltaTime);
 
+    // Aplicar nueva rotación
     this->setRotacion(rot);
 
-
-
-    //Ademas, se comprobara si se ha pulsado la tecla E cada vez que se le invoque. si es asi, invocará la función exit de system
-    if (GLFWInputManager::keyboardState[GLFW_KEY_E]) {
+    // Salida del programa al pulsar E
+    if (GLFWInputManager::keyboardState[GLFW_KEY_E])
         std::exit(0);
-	}
 }

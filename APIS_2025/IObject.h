@@ -17,6 +17,9 @@ public:
 
 	Mesh3D* GetMesh();
 	void SetMesh(Mesh3D* m);
+	
+	//mesh = m;
+	
 
 	virtual void loadDataFromFile(std::string file) = 0;
 };
