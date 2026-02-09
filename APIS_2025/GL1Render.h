@@ -30,5 +30,7 @@ public:
 	void removeObject(Object3D* obj);
 	void drawObjects(std::list<Object3D*>* objs);
 	bool isClosed() override;
+
+	GLFWwindow* getWindow() const { return window; }
 };
 

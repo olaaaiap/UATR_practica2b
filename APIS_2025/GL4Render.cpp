@@ -2,10 +2,7 @@
 #include <GLFW/glfw3.h>
 #include <glm/gtc/type_ptr.hpp>
 
-GL4Render::GL4Render(double w, double h): GL1Render(w, h)
-{
-
-}
+GL4Render::GL4Render(double w, double h): GL1Render(w, h){}
 
 void GL4Render::setupObject(Object3D* obj)
 {
@@ -51,65 +48,43 @@ void GL4Render::drawObjects(std::list<Object3D*>* objs)
 
     for (auto& obj : *objs) 
     {
-		auto model = obj->computeModelMatrix();
+        // Calcular matriz modelo
+        auto model = obj->computeModelMatrix();
 
-		glPushMatrix();
-		glLoadIdentity();
-		glMultMatrixf(&model[0][0]);
+        // Guardar la matriz actual en la pila
+        glPushMatrix();
+        glLoadIdentity(); // Cargar matriz identidad
+        glMultMatrixf(&model[0][0]); // Multiplicar por la matriz modelo del objeto
 
-		auto boIDS_t = bufferObjects[obj->objectId];
-		glBindVertexArray(boIDS_t.id);
-		glBindBuffer(GL_ARRAY_BUFFER, boIDS_t.vbo);
-		glBindBuffer(GL_ELEMENT_ARRAY_BARRIER_BIT, boIDS_t.idxbo);
+        // Activar buffers de datos
+        auto bo = bufferObjects[obj->objectId];
+        glBindVertexArray(bo.id);
+        glBindBuffer(GL_ARRAY_BUFFER, bo.vbo);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, bo.idxbo);
 
-		glEnableClientState(GL_VERTEX_ARRAY);
-		glVertexPointer(4, GL_FLOAT, sizeof(vertex_t), (void*)offsetof(vertex_t, vPosition));
-        
-		glDrawElements(GL_TRIANGLES, obj->vertexIndexList.size(), GL_UNSIGNED_INT, nullptr);
-
-		glPopMatrix();
-
-		glDisableClientState(GL_VERTEX_ARRAY);
-		glDisableClientState(GL_COLOR_ARRAY);
+        // Describir los buffers
+        glEnableClientState(GL_VERTEX_ARRAY);
+        glVertexPointer(4, GL_FLOAT, sizeof(vertex_t), (void*)offsetof(vertex_t, vPosition));
 
 
         drawObject(obj);
     }
 
-    glfwSwapBuffers(glfwGetCurrentContext());
-    glfwPollEvents();
+    if (this->getWindow()) {
+        glfwSwapBuffers(this->getWindow());
+        glfwPollEvents();
+    }
 }
 
 void GL4Render::drawObject(Object3D* obj)
 {
-    Mesh3D* mesh = obj->GetMesh();
-    Material* mat = mesh->getMaterial();
+    // Dibujar los elementos
+    glDrawElements(GL_TRIANGLES, obj->vertexIndexList.size(), GL_UNSIGNED_INT, nullptr);
 
-    mat->getProgram()->setMatrix("model", obj->computeModelMatrix());
-    //error en system abajo
-    //System::SetModelMatrix(obj->computeModelMatrix());
-    mat->prepare();
-    mat->getProgram()->use();
+    // Restaurar la matriz anterior
+    glPopMatrix();
 
-    auto& bo = bufferObjects[obj->objectId];
-    glBindVertexArray(bo.id);
-
-    unsigned int loc = mat->getProgram()->getVarLocation("vPos");
-    glEnableVertexAttribArray(loc);
-    glVertexAttribPointer(loc, 4, GL_FLOAT, GL_FALSE,
-        sizeof(vertex_t), (void*)0);
-
-    glDrawElements(GL_TRIANGLES,
-        mesh->getTriangleList()->size(),
-        GL_UNSIGNED_INT,
-        nullptr);
-
-    glDisableVertexAttribArray(loc);
-}
-
-void SetModelMatrix(const glm::mat4& modelMatrix)
-{
-    
-    //GLint modelLoc = glGetUniformLocation(shaderProgramID, "model");
-    //glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(modelMatrix));
+    // Deshabilitar los estados de cliente
+    glDisableClientState(GL_VERTEX_ARRAY);
+    glDisableClientState(GL_COLOR_ARRAY);
 }
