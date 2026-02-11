@@ -24,6 +24,8 @@ public:
 
 	Material* getMaterial() { return mat; }
 
+	void setMaterial(Material* m) { mat = m; }
+
     glm::vec4 colorRGBA; // Color básico de la malla
 
     Mesh3D(); // Constructor por defecto

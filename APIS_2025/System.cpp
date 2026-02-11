@@ -31,6 +31,17 @@ void System::SetWorld(World* w)
 	world = w;
 }
 
+
+glm::mat4 System::GetModelMatrix()
+{
+	return ModelMatrix;
+}
+
+void System::SetModelMatrix(const glm::mat4& matrix)
+{
+	ModelMatrix = matrix;
+}
+
 void System::initSystem()
 {
 	//Inicializar el sistema

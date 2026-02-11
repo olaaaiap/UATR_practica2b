@@ -29,15 +29,17 @@ void GLSLProgram::readVarList() {
     }
 }
 
-unsigned int GLSLProgram::getVarLocation(std::string varName) {
-    if (varList.find(varName) != varList.end())
-        return varList[varName];
+unsigned int GLSLProgram::getVarLocation(const std::string& name)
+{
+    if (varList.find(name) != varList.end())
+        return varList[name];
     else {
-        std::cout << "ERROR: variable " << varName <<
+        std::cout << "ERROR: variable " << name <<
             " no encontrada en shader\n";
         return -1;
     }
 }
+
 
 void GLSLProgram::addProgram(std::string fileName)
 {

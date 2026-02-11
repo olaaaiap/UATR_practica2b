@@ -1,6 +1,7 @@
 #include "TrianguloRot.h"
 #include "GLFWInputManager.h"
 #include "Mesh3D.h"
+#include "FactoryEngine.h"
 
 
 TrianguloRot::TrianguloRot()
@@ -15,9 +16,9 @@ TrianguloRot::TrianguloRot()
     // Lista de vértices del triángulo
     // Formato: pos (vec4)
     this->vertexList = {
-        {{ 0.0f,  0.5f, 0.0f, 1.0f }}, // superior
-        {{-0.5f, -0.5f, 0.0f, 1.0f }}, // abajo izquierda
-        {{ 0.5f, -0.5f, 0.0f, 1.0f }}  // abajo derecha
+        {{ 0.0f,  0.5f, 0.0f, 1.0f }, glm::vec4(1, 0, 0, 1)}, // superior
+        {{-0.5f, -0.5f, 0.0f, 1.0f }, glm::vec4(0, 1, 0, 1)}, // abajo izquierda
+        {{ 0.5f, -0.5f, 0.0f, 1.0f }, glm::vec4(0, 0, 1, 1)}  // abajo derecha
     };
 
     // Triángulo 3 índices
@@ -28,6 +29,14 @@ TrianguloRot::TrianguloRot()
     for (auto v : this->vertexList) 
     {
         mesh->addVertex(v);
+    }
+
+    //crear programa de dibujado
+    FactoryEngine factoryEngine;
+    Material* mat = factoryEngine.getNewMaterial();
+    if (mat) {
+        mat->loadPrograms({ "data/shader.vert", "data/shader.frag" });
+	    mesh->setMaterial(mat);
     }
 
     // Transformaciones iniciales

@@ -2,7 +2,7 @@
 #include "IRenderProgram.h"
 
 
-class GLSLProgram: IRenderProgram
+class GLSLProgram: public IRenderProgram
 {
 	unsigned int programId; //identificador OpenGl de programa GLSL
 
@@ -10,8 +10,7 @@ class GLSLProgram: IRenderProgram
 public:
 	bool linked = false;
 	void readVarList(); //Método para interrogar a un shader y averiguar todas las variables de tipo uniform y attribute que pueden ser accedidas, y guardarlas en el mapa “varList” :
-	unsigned int getVarLocation(std::string varName); //Método para obtener el “Location” de una variable de GLSL, y que además  muestra un error si no se ha encontrado
-	
+	unsigned int getVarLocation(const std::string& name) override;//Método para obtener el “Location” de una variable de GLSL, y que además  muestra un error si no se ha encontrado
 	void addProgram(std::string fileName)  override; // Añade un programa identificado por su nombre de archivo para compilarlo
 	void linkProgram()  override; // Una vez añadidos todos los programas,compila y linka para generar el programa final
 	void use()  override; // Activa el uso de este programa

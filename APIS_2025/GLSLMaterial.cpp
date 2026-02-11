@@ -12,6 +12,10 @@ void GLSLMaterial::addTriangle(glm::uint32 vldx1, glm::uint32 vldx2, glm::uint32
 
 void GLSLMaterial::loadPrograms(const std::vector<std::string>& files)
 {
+    if (!program) {
+        program = new GLSLProgram();
+    }
+
     for (auto& f : files)
         program->addProgram(f);
 

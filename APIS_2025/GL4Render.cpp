@@ -24,6 +24,10 @@ void GL4Render::setupObject(Object3D* obj)
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, bo.idxbo);//activar lista de indices de vértices
     numElements = obj->vertexIndexList.size();
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, numElements * sizeof(unsigned int), obj->vertexIndexList.data(), GL_STATIC_DRAW); //copiar indices de vertices
+   
+    obj->GetMesh()->getMaterial()->getProgram()->setVertexAttrib("vPos", sizeof(vertex_t), (void*)offsetof(vertex_t, vPosition), 4, GL_FLOAT);
+    obj->GetMesh()->getMaterial()->getProgram()->setVertexAttrib("vColor", sizeof(vertex_t), (void*)offsetof(vertex_t, vColor), 4, GL_FLOAT);
+
     //guardar ids de buffers
     bufferObjects[obj->objectId] = bo;
 }

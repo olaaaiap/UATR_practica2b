@@ -153,4 +153,12 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="data\shader.vert">
+      <Filter>Archivos de recursos\data</Filter>
+    </None>
+    <None Include="data\shader.frag">
+      <Filter>Archivos de recursos\data</Filter>
+    </None>
+  </ItemGroup>
 </Project>

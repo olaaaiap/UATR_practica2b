@@ -9,6 +9,8 @@
 
 int main(int argc, char** argv)
 {
+	FactoryEngine::SetGraphicsBackend(FactoryEngine::GBackend::GL4);
+
 	//Inicializar el backend dela clase FactoryEngine
 	IRender* render = FactoryEngine::getNewRender();
 	InputManager* inputManager = FactoryEngine::getNewInputManager();
