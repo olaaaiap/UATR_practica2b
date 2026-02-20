@@ -12,8 +12,7 @@ void GLSLProgram::readVarList() {
         char varName[100];
         int bufSize = 100, length = 0, size = 0;
         GLenum type = -1;
-        glGetActiveAttrib(programId, (GLuint)i, bufSize, &length, &size, &type,
-            varName);
+        glGetActiveAttrib(programId, (GLuint)i, bufSize, &length, &size, &type, varName);
         varList[std::string(varName)] = glGetAttribLocation(programId, varName);
     }
 
